@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Owner_Changes</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(OwnerId),
+OR(
+ISPICKVAL(LeadSource,&apos;&apos;),
+AND(
+ISBLANK(NumberOfEmployees),
+AND(
+NOT($Profile.Name = &apos;System Administrator&apos;),
+NOT($Profile.Name = &apos;Contract Manager&apos;)
+)
+),
+AND(
+ISBLANK(Country__c),
+NOT($Profile.Name = &apos;System Administrator&apos;)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change the owner</errorMessage>
+</ValidationRule>
