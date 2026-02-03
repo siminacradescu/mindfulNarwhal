@@ -2,7 +2,7 @@
 
 ## Exercise 1
 
-I have created a new custom object named {Country__c}(https://github.com/siminacradescu/mindfulNarwhal/tree/main/mindfulNarwhal/force-app/main/default/objects/Country__c) with custom fields.
+I have created a new custom object named [Country__c](https://github.com/siminacradescu/mindfulNarwhal/tree/main/mindfulNarwhal/force-app/main/default/objects/Country__c) with custom fields.
 
 For the API connection, I have created:
 - free account on CountryLayer
